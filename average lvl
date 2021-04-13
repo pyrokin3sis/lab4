@@ -1,0 +1,16 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+using namespace std;
+ 
+/* Variant 10 - Построить строку, в которой все символы заданы в обратном порядке.*/
+ 
+int main()
+{
+    string str;
+    cout << "Input your string: ";
+    getline(cin,str);
+    
+    reverse(str.begin(),str.end());
+    cout << "Result: "<< str <<endl;
+}
