@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+#include <sstream>
+#include <vector>
+using namespace std;
+
+/* Variant 10 - По заданной строке получить массив слов, входящих в эту строку. Разделителями слов считаются пробелы.*/
+ 
+void SplitStr(string S, vector <string> & N)
+{
+    istringstream mass(S);
+    string words;
+    while(mass >> words)
+        N.push_back(words);
+}
+ 
+int main()
+{
+    vector <string> Z;
+    string S;
+    
+    cout << "Input your worlds:";
+    getline(cin, S);
+    
+    SplitStr(S, Z);
+    for (size_t i = 0; i < Z.size(); i++)
+    {
+        cout << "Result:" << Z[i] << endl;
+    }
+}
